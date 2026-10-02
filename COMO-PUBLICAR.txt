@@ -1,0 +1,42 @@
+CONVITE ISA ESPÍNDOLA — como colocar no ar (grátis)
+====================================================
+
+ARQUIVOS
+  index.html      -> o convite completo (imagens, música e lista de presentes já estão dentro)
+  apps-script.gs  -> código da planilha Google que recebe confirmações e presentes
+
+PASSO 1 — PLANILHA (recebe as confirmações e os presentes)
+  1. Entre em sheets.new com a conta Google da família e dê um nome (ex.: "Convite Isa").
+  2. Menu Extensões > Apps Script. Apague o que estiver lá e cole TODO o apps-script.gs.
+  3. No topo do código:
+       SENHA       = a senha do painel (escolha uma só de vocês)
+       EMAIL_AVISO = e-mail que recebe aviso a cada confirmação/presente (ou deixe '')
+     Clique em Salvar (ícone de disquete).
+  4. Implantar > Nova implantação > engrenagem > "App da Web"
+       Executar como: Eu     Quem pode acessar: Qualquer pessoa
+     Implantar > Autorizar acesso > escolha a conta.
+     Se aparecer "O Google não verificou este app": Avançado > Acessar (não seguro) > Permitir.
+     (É o seu próprio script; o aviso é padrão do Google.)
+  5. Copie a URL que termina em /exec. Ela vai em CONFIG.planilhaUrl no index.html.
+
+PASSO 2 — SITE GRÁTIS (GitHub Pages)
+  Repositório: github.com/isaespindolaconvite/isaespindolaconvite.github.io
+  Link do convite: https://isaespindolaconvite.github.io/
+
+PAINEL DA FAMÍLIA (ver quem confirmou)
+  https://isaespindolaconvite.github.io/#painel
+  (ou o link "Área do responsável" no rodapé do convite)
+  - Entra com a SENHA do apps-script.gs; o aparelho lembra a senha (botão Sair apaga).
+  - Mostra pessoas confirmadas, acompanhantes, quem não vai, presentes e recados.
+  - Atualiza sozinho a cada minuto; WhatsApp de cada convidado é clicável.
+  - Botão "Abrir planilha" abre a planilha Google (dá para ver também pelo app Planilhas).
+
+IMPORTANTE
+  - O link do Claude (claude.ai/artifact/...) serve só para VER o visual.
+    Ele não envia dados para a planilha — não mande esse link aos convidados.
+  - Pagamentos vão direto para o Pix e para o link do cartão (Asaas).
+    O painel mostra o que cada convidado informou em "Já paguei"; confira no extrato.
+
+EDITAR
+  Tudo fica no bloco CONFIG perto do fim do index.html: textos, data, local,
+  prazo do RSVP, Pix, link do cartão e lista de presentes (valor = loja + 3%).
